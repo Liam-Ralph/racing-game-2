@@ -19,6 +19,18 @@ let brokenEngine = false, brokenTireDirection;
 // Other
 let i, carY, carX;
 
+// CHECK RENDERING ENGINE
+if(/Gecko/.test(navigator.userAgent)){
+    alert(
+        "It appears you are using Firefox,\n" +
+        "or another browser with the Gecko rendering engine.\n" +
+        "this website may run slowly properly due to problems\n" +
+        "with how Gecko renders p5.js canvases. As a Firefox\n" +
+        "user myself, I understand your frustration."
+    )
+}
+
+
 function preload(){
     imgWater = loadImage("Images/background-water.png");
     imgRoad = loadImage("Images/background-road.png");
